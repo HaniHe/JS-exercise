@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #687fa9 0%, #d6dfed 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.login-form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #1e3c72;
+    font-size: 24px;
+}
+
+.input-group {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.input-group::before {
+    content: '';
+    position: absolute;
+    left: 12px;
+    top: 14px;
+    width: 18px;
+    height: 18px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 1;
+    opacity: 0.7;
+}
+
+.input-group:nth-child(2)::before {
+    background-image: url('images/user-icon.png');
+}
+
+.input-group:nth-child(3)::before {
+    background-image: url('images/lock-icon.png');
+}
+
+input {
+    width: 100%;
+    padding: 12px 12px 12px 40px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.3s;
+    background-color: #ffffff;
+    height: 45px;
+}
+
+input::placeholder {
+    color: #999;
+    font-size: 14px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #687fa9;
+    box-shadow: 0 0 5px rgba(104, 127, 169, 0.3);
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 12px;
+    margin-top: 6px;
+    display: none;
+    position: absolute;
+    left: 0;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #1e3c72;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+    height: 45px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #2a5298;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.welcome-message {
+    text-align: center;
+    margin-top: 20px;
+    color: #1e3c72;
+    font-size: 16px;
+    font-weight: bold;
+    display: none;
+}
+
+.error {
+    border-color: #e74c3c !important;
+}
+
+.error-message.show {
+    display: block;
+}
